@@ -11,10 +11,10 @@ class WebActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web)
         webview = findViewById(R.id.webView)
-        webview.loadUrl("http://www.google.com")
-//        val unencodedHtml =
-//            "<html><body>'%23' is the percent code for '#' </body><html>";
-//        val encodedHtml = Base64.encodeToString(unencodedHtml.toByteArray(), Base64.NO_PADDING)
-//        webview.loadData(encodedHtml, "text/html", "base64")
+        //webview.loadUrl("http://www.google.com")
+  val unencodedHtml =
+    "<html><body>'%23' is the percent code for '#' </body><html>";
+     val encodedHtml = Base64.encodeToString(unencodedHtml.toByteArray(), Base64.NO_PADDING)
+    webview.loadData(encodedHtml, "text/html", "base64")
     }
 }
